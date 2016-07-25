@@ -1,9 +1,4 @@
 fn main() {
-    let mut sum = 0i32;
-    for x in 0..1000 {
-        if x % 3 == 0 || x % 5 == 0 {
-            sum += x;
-        }
-    }
+    let sum = (0..1000).fold(0, |acc, x| acc + x);
     println!("{}", sum);
 }
