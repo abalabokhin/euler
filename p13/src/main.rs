@@ -104,9 +104,12 @@ fn main() {
 
     let mut remain = 0;
     let mut result = vec![];
-    for i in 0..50 {
+    for i in (0..50).rev() {
         let sum = vec.iter().fold(0, |acc, &x| acc + (x.chars().nth(i).unwrap().to_digit(10).unwrap()));
         let total_sum = remain + sum;
+
+        println!("{} {}", total_sum, remain);
+
         result.push(total_sum % 10);
         remain = total_sum / 10;
     }
