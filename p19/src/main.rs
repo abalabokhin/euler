@@ -27,13 +27,17 @@ fn test() {
 
 fn main() {
     let mut sundays = 0;
-    let mut first_day_in_month = -1;
-    for year in 1900..2000 {
-        for month in 1..12 {
-            first_day_in_month += number_of_days_in_month(year, month);
+    // considering that 0 is Sunday, that means that Monday is 1. 
+    // We just calculating the number of every first day in month and if it is divisible by 7, 
+    // is it considered Sunday.
+    let mut first_day_in_month = 1;
+    for year in 1900..2001 {
+        for month in 1..13 {
+            //println!("{} {} {}", month, first_day_in_month, first_day_in_month % 7);
             if first_day_in_month % 7 == 0 && year > 1900 {
                 sundays += 1;
             }
+            first_day_in_month += number_of_days_in_month(year, month);
         }
     }
     println!("{}", sundays);
