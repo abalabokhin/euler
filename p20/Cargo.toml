@@ -1,0 +1,7 @@
+[package]
+name = "p20"
+version = "0.1.0"
+authors = ["Andrey Balabokhin <abalabokhin@gmail.com>"]
+
+[dependencies]
+num = "0.1"
