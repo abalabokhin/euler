@@ -6,7 +6,7 @@ fn main() {
         if n2 % 2 == 0 {
             sum += n2;
         }
-        let (t1, t2) = (n2, n1 + n2); 
+        let (t1, t2) = (n2, n1 + n2);
         n1 = t1;
         n2 = t2;
     }
