@@ -1,4 +1,3 @@
-use std::f64;
 use std::cmp;
 
 fn main() {
@@ -6,7 +5,7 @@ fn main() {
     let mut max_div = 0;
     loop {
         let mut local_max_div = 0;
-        for x in 2..((n as f64).sqrt().round() as i64) {
+        for x in cmp::max(2, max_div)..n {
             if n % x == 0 {
                 n = n / x;
                 local_max_div = x;
@@ -22,4 +21,3 @@ fn main() {
     }
     println!("{}", max_div);
 }
-
